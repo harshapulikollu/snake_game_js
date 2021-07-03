@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #954b06;
+    position: relative;
+}
+
+.board {
+    display: grid;
+    height:600px;
+    width: 450px;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    border: 1px solid black;
+    background-color: #6185f8;
+}
+
+.snake {
+    background-color: tomato;
+}
+
+.food {
+    background-color: green;
+}
+
+.score{
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    font-size: 50px;
+    color: white;
+}
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    width: 30%;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.modal-content button {
+    width: 100px;
+    height: 60px;
+    background-color: green;
+    border-top: 5px solid greenyellow;
+    border-right: 5px solid darkgreen;
+    border-left:0 ;
+    border-bottom: 0;
+    border-radius: 4px;
+    color: white;
+}
+
+@media screen and (max-width: 470px) {
+    .board {
+        height:80%;
+        width: 85%;
+    }
+
+    .score{
+        position: absolute;
+        top: 10px;
+        left: 40%;
+        font-size: 20px;
+        color: white;
+    }
+
+    .modal {
+        padding-top: 50%;
+    }
+
+    .modal-content {
+        width: 60%;
+        background-color: white;
+        margin: auto;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}
